@@ -17,3 +17,7 @@ manifest:
       url: git@github.com:psocedge/module-foo.git
       revision: main
       path: modules/lib/foo
+    - name: module-math
+      url: git@github.com:psocedge/module-math.git
+      revision: main
+      path: modules/lib/math
