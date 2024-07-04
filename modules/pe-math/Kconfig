@@ -1,0 +1,10 @@
+# Copyright (c) 2023 Meta Platforms
+# SPDX-License-Identifier: Apache-2.0
+
+config ZEPHYR_PE_MATH_MODULE
+	bool
+
+menuconfig PE_MATH
+	bool "PE_MATH Library Support"
+	help
+	  This option enables the PE_MATH library.
