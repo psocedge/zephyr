@@ -149,6 +149,11 @@
 		zephyr,memory-region = "ISRAM";
 	};
 
+	qspi: sram@38000000 { /* alias @ 0x28000000 */
+		compatible = "mmio-sram";
+		reg = <0x38000000 DT_SIZE_M(8)>;
+	};
+
 	/* DDR4 - 2G, alternates non-secure/secure every 256M */
 	ddr4: memory@60000000 {
 		device_type = "memory";

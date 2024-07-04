@@ -27,7 +27,7 @@
 		zephyr,console = &uart0;
 		zephyr,shell-uart = &uart0;
 		zephyr,sram = &ram;
-		zephyr,flash = &code;
+		zephyr,flash = &ddr4;
 	};
 
 	leds {
@@ -99,6 +99,11 @@
 		compatible = "zephyr,memory-region", "mmio-sram";
 		reg = <0x21000000 DT_SIZE_M(4)>;
 		zephyr,memory-region = "ISRAM";
+	};
+
+	qspi: sram@28000000 {
+		compatible = "mmio-sram";
+		reg = <0x28000000 DT_SIZE_M(8)>;
 	};
 
 	/* DDR4 - 2G, alternates non-secure/secure every 256M */

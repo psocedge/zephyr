@@ -1,0 +1,15 @@
+# Copyright (c) 2023 Meta Platforms
+# SPDX-License-Identifier: Apache-2.0
+
+config ZEPHYR_PE_LOG_MODULE
+	bool
+
+menuconfig PE_LOG
+	bool "PE_LOG Library Support"
+	help
+	  This option enables the PE_LOG library.
+
+config APP_LINK_WITH_PE_LOG
+	     bool "Make PE_LOG header file available to application"
+	     default y
+	     depends on PE_LOG
